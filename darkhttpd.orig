@@ -1866,10 +1866,8 @@ static void generate_dir_listing(struct connection *conn, const char *path) {
     append(listing, "<html>\n<head>\n <title>");
     append(listing, conn->url);
     append(listing, "</title>\n</head>\n<body>\n<h1>");
-    // append(listing, conn->url);
-    append(listing, "hdb2.org");
-    // append(listing, "</h1>\n<tt><pre>\n");
-    append(listing, "</h1>\n<pre>\n");
+    append(listing, conn->url);
+    append(listing, "</h1>\n<tt><pre>\n");
 
     spaces = xmalloc(maxlen);
     memset(spaces, ' ', maxlen);
@@ -1901,8 +1899,7 @@ static void generate_dir_listing(struct connection *conn, const char *path) {
     free(spaces);
 
     append(listing,
-     // "</pre></tt>\n"
-     "</pre>\n"
+     "</pre></tt>\n"
      "<hr>\n");
 
     rfc1123_date(date, now);

@@ -1,14 +1,15 @@
-How to build darkhttpd
-----------------------
+# darkhttpd
+
+a mirror of https://unix4lyfe.org/darkhttpd/ with my changes.
+
+## build
 
 Simply run make:
-  $ make
+    $ make
 
+## running
 
-
-How to run darkhttpd
---------------------
-
+```
 Serve /var/www/htdocs on the default port (80 if running as root, else 8080):
   $ ./darkhttpd /var/www/htdocs
 
@@ -59,5 +60,4 @@ Commandline options can be combined:
 To see a full list of commandline options,
 run darkhttpd without any arguments:
   $ ./darkhttpd
-
-vim:set ts=2 sw=2 et tw=80:
+```
